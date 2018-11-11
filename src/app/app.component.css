@@ -5,3 +5,18 @@
 .example-spacer {
   flex: 1 1 auto;
 }
+
+
+.my-container {
+  width: 100%;
+  height: -webkit-fill-available;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+/* TODO: check, not sure if needed */
+mat-icon{
+  font-family: 'Material Icons' !important;
+}

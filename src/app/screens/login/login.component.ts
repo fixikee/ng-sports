@@ -9,8 +9,7 @@ import {FormControl, Validators} from '@angular/forms';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  email = new FormControl('', [Validators.required, Validators.email]);
-  hide = true;
+  private showEmailErrorIcon: boolean;
   // login = new Login();
 
 /*
@@ -20,6 +19,9 @@ export class LoginComponent implements OnInit {
   constructor() {
 
   }
+  email = new FormControl('', [Validators.required, Validators.email]);
+  hide = true;
+  emailInputFocusedOut = false;
 
   ngOnInit() {
   }
@@ -29,4 +31,11 @@ export class LoginComponent implements OnInit {
       this.email.hasError('email') ? 'Not a valid email' :
         '';
   }
+
+  // shows error icon only after first focus out (and if input is invalid)
+  focusOutFunction() {
+    console.log('Focus Out');
+    this.emailInputFocusedOut = true;
+  }
+
 }
