@@ -13,13 +13,15 @@ import {MatSelectModule} from '@angular/material/select';
 import {LoginComponent} from './screens/login/login.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatButtonModule, MatCheckboxModule, MatIconModule} from '@angular/material';
+import { RegisterComponent } from './screens/register/register.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NewsFeedComponent,
     EventsComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
