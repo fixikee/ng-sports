@@ -8,3 +8,8 @@ export interface IRegister {
   email: string;
   password: string;
 }
+
+export interface ILocation {
+  locationName: string;
+  coordinates: string;
+}

@@ -1,3 +1,13 @@
-<p>
-  locations-add works!
-</p>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+  <mat-form-field>
+    <input matInput id="locationName" formControlName="locationName" placeholder="Name *">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput id="coordinates" formControlName="coordinates" placeholder="Coordinates *">
+  </mat-form-field>
+
+  <button mat-button="primary" type="submit" [disabled]="!form.valid">Add Location</button>
+
+</form>
