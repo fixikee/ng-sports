@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
 
-// import { Login} from '../../dtos/login';
+// import { ILogin} from '../../dtos/login';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +10,7 @@ import {FormControl, Validators} from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
   private showEmailErrorIcon: boolean;
-  // login = new Login();
+  // login = new ILogin();
 
 /*
   LoginDto loginDto;
