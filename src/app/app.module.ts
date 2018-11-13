@@ -12,7 +12,14 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import {LoginComponent} from './screens/login/login.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {MatButtonModule, MatCheckboxModule, MatIconModule, MatListModule, MatListSubheaderCssMatStyler} from '@angular/material';
+import {
+  MatButtonModule,
+  MatCardModule,
+  MatCheckboxModule,
+  MatIconModule,
+  MatListModule,
+  MatListSubheaderCssMatStyler
+} from '@angular/material';
 import { RegisterComponent } from './screens/register/register.component';
 import { LocationsAddComponent } from './screens/locations/locations-add/locations-add.component';
 import { LocationsComponent } from './screens/locations/locations.component';
@@ -40,7 +47,8 @@ import { LocationsComponent } from './screens/locations/locations.component';
     MatIconModule,
     MatCheckboxModule,
     MatButtonModule,
-    MatListModule
+    MatListModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

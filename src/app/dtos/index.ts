@@ -10,6 +10,8 @@ export interface IRegister {
 }
 
 export interface ILocation {
+  id: number;
   locationName: string;
   coordinates: string;
+  imgUrl: string;
 }

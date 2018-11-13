@@ -31,8 +31,10 @@ export class LocationsAddComponent implements OnInit {
   public onSubmit(): void {
     if (this.form.valid) {
       this.data = {
+        id: 0,
         locationName: this.form.get('locationName').value,
-        coordinates: this.form.get('coordinates').value
+        coordinates: this.form.get('coordinates').value,
+        imgUrl: 'https://material.angular.io/assets/img/examples/shiba2.jpg'
       };
       console.log(this.data);
     } else {

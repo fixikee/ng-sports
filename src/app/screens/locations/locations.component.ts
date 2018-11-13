@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ILocation} from '../../dtos';
+import locationsData from './locations.data';
 
 @Component({
   selector: 'app-locations',
@@ -7,16 +8,7 @@ import {ILocation} from '../../dtos';
   styleUrls: ['./locations.component.css']
 })
 export class LocationsComponent implements OnInit {
-  locations: ILocation[] = [
-    {
-      locationName: 'SomoS',
-      coordinates: 'világ közepe'
-    },
-    {
-      locationName: 'Gabesz albija',
-      coordinates: 'sörpong'
-    },
-  ];
+  locations: ILocation[] = locationsData;
 
 
   constructor() {
