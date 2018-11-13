@@ -23,6 +23,7 @@ import {
 import { RegisterComponent } from './screens/register/register.component';
 import { LocationsAddComponent } from './screens/locations/locations-add/locations-add.component';
 import { LocationsComponent } from './screens/locations/locations.component';
+import { LocationsDetailsComponent } from './screens/locations/locations-details/locations-details.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { LocationsComponent } from './screens/locations/locations.component';
     LoginComponent,
     RegisterComponent,
     LocationsAddComponent,
-    LocationsComponent
+    LocationsComponent,
+    LocationsDetailsComponent
   ],
   imports: [
     BrowserModule,
