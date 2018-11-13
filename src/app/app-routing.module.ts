@@ -6,6 +6,7 @@ import {LoginComponent} from './screens/login/login.component';
 import {RegisterComponent} from './screens/register/register.component';
 import {LocationsAddComponent} from './screens/locations/locations-add/locations-add.component';
 import {LocationsComponent} from './screens/locations/locations.component';
+import {LocationsDetailsComponent} from './screens/locations/locations-details/locations-details.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/news', pathMatch: 'full'},
@@ -14,7 +15,8 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'locations/add', component: LocationsAddComponent},
-  {path: 'locations', component: LocationsComponent}
+  {path: 'locations', component: LocationsComponent},
+  {path: 'locations/:id', component: LocationsDetailsComponent}
 ];
 
 @NgModule({
