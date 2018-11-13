@@ -15,6 +15,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatButtonModule, MatCheckboxModule, MatIconModule} from '@angular/material';
 import { RegisterComponent } from './screens/register/register.component';
 import { LocationsAddComponent } from './screens/locations/locations-add/locations-add.component';
+import { LocationsComponent } from './screens/locations/locations.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { LocationsAddComponent } from './screens/locations/locations-add/locatio
     EventsComponent,
     LoginComponent,
     RegisterComponent,
-    LocationsAddComponent
+    LocationsAddComponent,
+    LocationsComponent
   ],
   imports: [
     BrowserModule,

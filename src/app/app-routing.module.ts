@@ -5,6 +5,7 @@ import {EventsComponent} from './screens/events/events.component';
 import {LoginComponent} from './screens/login/login.component';
 import {RegisterComponent} from './screens/register/register.component';
 import {LocationsAddComponent} from './screens/locations/locations-add/locations-add.component';
+import {LocationsComponent} from './screens/locations/locations.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/news', pathMatch: 'full'},
@@ -12,7 +13,8 @@ const routes: Routes = [
   {path: 'events', component: EventsComponent},
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
-  {path: 'locations/add', component: LocationsAddComponent}
+  {path: 'locations/add', component: LocationsAddComponent},
+  {path: 'locations', component: LocationsComponent}
 ];
 
 @NgModule({
