@@ -19,8 +19,8 @@ export class LocationsDetailsComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
       this.id = +params['id'];
+      this.location = locationsData.find(x => x.id === this.id);
     });
-    this.location = locationsData.find(x => x.id === this.id);
   }
 
   ngOnDestroy() {
