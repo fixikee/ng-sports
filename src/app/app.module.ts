@@ -24,6 +24,7 @@ import { RegisterComponent } from './screens/register/register.component';
 import { LocationsAddComponent } from './screens/locations/locations-add/locations-add.component';
 import { LocationsComponent } from './screens/locations/locations.component';
 import { LocationsDetailsComponent } from './screens/locations/locations-details/locations-details.component';
+import { LocationsEditComponent } from './screens/locations/locations-edit/locations-edit.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { LocationsDetailsComponent } from './screens/locations/locations-details
     RegisterComponent,
     LocationsAddComponent,
     LocationsComponent,
-    LocationsDetailsComponent
+    LocationsDetailsComponent,
+    LocationsEditComponent
   ],
   imports: [
     BrowserModule,
