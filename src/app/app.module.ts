@@ -25,6 +25,7 @@ import { LocationsAddComponent } from './screens/locations/locations-add/locatio
 import { LocationsComponent } from './screens/locations/locations.component';
 import { LocationsDetailsComponent } from './screens/locations/locations-details/locations-details.component';
 import { LocationsEditComponent } from './screens/locations/locations-edit/locations-edit.component';
+import { ActivityTypeComponent } from './screens/activity-type/activity-type.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { LocationsEditComponent } from './screens/locations/locations-edit/locat
     LocationsAddComponent,
     LocationsComponent,
     LocationsDetailsComponent,
-    LocationsEditComponent
+    LocationsEditComponent,
+    ActivityTypeComponent
   ],
   imports: [
     BrowserModule,
