@@ -18,5 +18,6 @@ export interface ILocation {
 
 export interface IActivityType {
   id: number;
-  activityName: string;
+  activityTypeName: string;
+  icon: string;
 }
