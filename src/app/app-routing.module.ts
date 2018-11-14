@@ -7,6 +7,7 @@ import {RegisterComponent} from './screens/register/register.component';
 import {LocationsAddComponent} from './screens/locations/locations-add/locations-add.component';
 import {LocationsComponent} from './screens/locations/locations.component';
 import {LocationsDetailsComponent} from './screens/locations/locations-details/locations-details.component';
+import {LocationsEditComponent} from './screens/locations/locations-edit/locations-edit.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/news', pathMatch: 'full'},
@@ -16,7 +17,8 @@ const routes: Routes = [
   {path: 'register', component: RegisterComponent},
   {path: 'locations/add', component: LocationsAddComponent},
   {path: 'locations', component: LocationsComponent},
-  {path: 'locations/:id', component: LocationsDetailsComponent}
+  {path: 'locations/:id', component: LocationsDetailsComponent},
+  {path: 'locations/edit/:id', component: LocationsEditComponent}
 ];
 
 @NgModule({
