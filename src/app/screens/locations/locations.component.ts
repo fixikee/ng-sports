@@ -17,4 +17,8 @@ export class LocationsComponent implements OnInit {
   ngOnInit() {
   }
 
+  deleteFunc() {
+    console.log('delete works');
+  }
+
 }

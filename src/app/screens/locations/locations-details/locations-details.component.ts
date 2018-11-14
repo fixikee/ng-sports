@@ -27,4 +27,7 @@ export class LocationsDetailsComponent implements OnInit, OnDestroy {
     this.sub.unsubscribe();
   }
 
+  deleteFunc() {
+    console.log('delete works');
+  }
 }
