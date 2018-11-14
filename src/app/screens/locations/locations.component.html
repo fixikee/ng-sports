@@ -18,7 +18,7 @@
     <img mat-card-image src="{{ location.imgUrl }}" alt="{{ location.locationName }}">
     <mat-card-actions>
       <button mat-button [routerLink]="['/locations', location.id]">Open</button>
-      <button mat-button>Edit</button>
+      <button mat-button [routerLink]="['/locations/edit', location.id]">Edit</button>
       <button mat-button (click)="deleteFunc()">Delete</button>
     </mat-card-actions>
   </mat-card>
