@@ -15,3 +15,8 @@ export interface ILocation {
   coordinates: string;
   imgUrl: string;
 }
+
+export interface IActivityType {
+  id: number;
+  activityName: string;
+}
