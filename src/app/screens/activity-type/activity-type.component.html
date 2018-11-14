@@ -3,7 +3,7 @@
 <mat-list>
   <h3 mat-subheader>Acivity types</h3>
   <mat-list-item *ngFor="let activityType of activityTypes">
-    <a [routerLink]="['/locations/edit', location.id]">
+    <a [routerLink]="['/activity-type', activityType.id]">
       <mat-icon mat-list-icon>{{ activityType.icon }}</mat-icon>
     </a>
     <h4 mat-line>{{ activityType.activityTypeName }}</h4>

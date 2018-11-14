@@ -9,6 +9,7 @@ import {LocationsComponent} from './screens/locations/locations.component';
 import {LocationsDetailsComponent} from './screens/locations/locations-details/locations-details.component';
 import {LocationsEditComponent} from './screens/locations/locations-edit/locations-edit.component';
 import {ActivityTypeComponent} from './screens/activity-type/activity-type.component';
+import {ActivityTypeDetailsComponent} from './screens/activity-type/activity-type-details/activity-type-details.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/news', pathMatch: 'full'},
@@ -20,7 +21,8 @@ const routes: Routes = [
   {path: 'locations', component: LocationsComponent},
   {path: 'locations/:id', component: LocationsDetailsComponent},
   {path: 'locations/edit/:id', component: LocationsEditComponent},
-  {path: 'activity-type', component: ActivityTypeComponent}
+  {path: 'activity-type', component: ActivityTypeComponent},
+  {path: 'activity-type/:id', component: ActivityTypeDetailsComponent}
 ];
 
 @NgModule({
