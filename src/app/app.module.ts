@@ -28,6 +28,7 @@ import { LocationsEditComponent } from './screens/locations/locations-edit/locat
 import { ActivityTypeComponent } from './screens/activity-type/activity-type.component';
 import { ActivityTypeDetailsComponent } from './screens/activity-type/activity-type-details/activity-type-details.component';
 import { ActivityTypeEditComponent } from './screens/activity-type/activity-type-edit/activity-type-edit.component';
+import { ActivityTypeAddComponent } from './screens/activity-type/activity-type-add/activity-type-add.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { ActivityTypeEditComponent } from './screens/activity-type/activity-type
     LocationsEditComponent,
     ActivityTypeComponent,
     ActivityTypeDetailsComponent,
-    ActivityTypeEditComponent
+    ActivityTypeEditComponent,
+    ActivityTypeAddComponent
   ],
   imports: [
     BrowserModule,
