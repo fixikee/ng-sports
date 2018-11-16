@@ -1,11 +1,7 @@
-.example-container > * {
+.mat-form-field {
   width: 100%;
 }
 
-.example-container .button-row {
-  justify-content: space-between;
-  display: flex;
-}
  .my-icon {
    color: #ee0000;
  }

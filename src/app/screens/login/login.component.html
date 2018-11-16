@@ -1,21 +1,14 @@
-<div class="example-container">
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+
   <mat-form-field>
-    <input matInput (focusout)="focusOutFunction()" placeholder="Enter your email" [formControl]="email" required>
-    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-    <!--<mat-icon *ngIf="getErrorMessage().length > 0" class="my-icon" matSuffix>error</mat-icon>-->
-    <mat-icon *ngIf="email.invalid && emailInputFocusedOut" class="my-icon" matSuffix>error</mat-icon>
+    <input matInput id="email" type="email" formControlName="email" placeholder="Email *">
   </mat-form-field>
 
   <mat-form-field>
-    <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'">
+    <input matInput id="password" [type]="hide ? 'password' : 'text'" formControlName="password" placeholder="Password *">
     <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
   </mat-form-field>
 
-  <mat-checkbox>Remember me</mat-checkbox>
+  <button mat-raised-button color="primary" type="submit" [disabled]="!form.valid">Login</button>
 
-  <div class="button-row">
-    <button mat-button>Index</button>
-    <button mat-button>Register</button>
-  </div>
-
-</div>
+</form>

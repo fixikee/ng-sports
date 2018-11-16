@@ -1,41 +1,43 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, Validators} from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {ILogin} from '../../dtos';
 
-// import { ILogin} from '../../dtos/login';
 
 @Component({
-  selector: 'app-login',
+  selector: 'app-register',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  private showEmailErrorIcon: boolean;
-  // login = new ILogin();
+  public form: FormGroup;
+  public data: ILogin;
+  public hide = true;
 
-/*
-  LoginDto loginDto;
-*/
-
-  constructor() {
-
-  }
-  email = new FormControl('', [Validators.required, Validators.email]);
-  hide = true;
-  emailInputFocusedOut = false;
+  constructor(
+    private formBuilder: FormBuilder
+  ) {}
 
   ngOnInit() {
+    this.createForm();
   }
 
-  getErrorMessage() {
-    return this.email.hasError('required') ? 'You must enter a value' :
-      this.email.hasError('email') ? 'Not a valid email' :
-        '';
+  public createForm(): void {
+    this.form = this.formBuilder.group({
+        email: ['', [Validators.required, Validators.email]],
+        password: ['', Validators.required],
+      }
+    );
   }
 
-  // shows error icon only after first focus out (and if input is invalid)
-  focusOutFunction() {
-    console.log('Focus Out');
-    this.emailInputFocusedOut = true;
+  public onSubmit(): void {
+    if (this.form.valid) {
+      this.data = {
+        email: this.form.get('email').value,
+        password: this.form.get('password').value,
+      };
+      console.log(this.data);
+    } else {
+      alert('invalid form');
+    }
   }
-
 }
