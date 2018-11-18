@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {IEvent} from '../../dtos';
+import eventsData from './events.data';
 
 @Component({
   selector: 'app-events',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./events.component.css']
 })
 export class EventsComponent implements OnInit {
+  events: IEvent[] = eventsData;
+
 
   constructor() { }
 

@@ -16,6 +16,14 @@ export interface ILocation {
   imgUrl: string;
 }
 
+export interface IEvent {
+  id: number;
+  name: string;
+  date: Date;
+  location: ILocation;
+  imgUrl: string;
+}
+
 export interface IActivityType {
   id: number;
   activityTypeName: string;

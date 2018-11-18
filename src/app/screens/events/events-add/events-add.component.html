@@ -1,0 +1,17 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+  <mat-form-field>
+    <input matInput id="name" formControlName="name" placeholder="Name *">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput id="date" formControlName="date" placeholder="Date *">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput id="location" formControlName="location" placeholder="Location *">
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit" [disabled]="!form.valid">Add Event</button>
+
+</form>

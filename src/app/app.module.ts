@@ -4,7 +4,6 @@ import {NgModule} from '@angular/core';
 import {AppComponent} from './app.component';
 import {NewsFeedComponent} from './screens/news-feed/news-feed.component';
 import {AppRoutingModule} from './app-routing.module';
-import {EventsComponent} from './screens/events/events.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatInputModule} from '@angular/material/input';
@@ -29,12 +28,15 @@ import { ActivityTypeComponent } from './screens/activity-type/activity-type.com
 import { ActivityTypeDetailsComponent } from './screens/activity-type/activity-type-details/activity-type-details.component';
 import { ActivityTypeEditComponent } from './screens/activity-type/activity-type-edit/activity-type-edit.component';
 import { ActivityTypeAddComponent } from './screens/activity-type/activity-type-add/activity-type-add.component';
+import { EventsComponent } from './screens/events/events.component';
+import { EventsAddComponent } from './screens/events/events-add/events-add.component';
+import { EventsEditComponent } from './screens/events/events-edit/events-edit.component';
+import { EventsDetailsComponent } from './screens/events/events-details/events-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NewsFeedComponent,
-    EventsComponent,
     LoginComponent,
     RegisterComponent,
     LocationsAddComponent,
@@ -44,7 +46,11 @@ import { ActivityTypeAddComponent } from './screens/activity-type/activity-type-
     ActivityTypeComponent,
     ActivityTypeDetailsComponent,
     ActivityTypeEditComponent,
-    ActivityTypeAddComponent
+    ActivityTypeAddComponent,
+    EventsAddComponent,
+    EventsComponent,
+    EventsDetailsComponent,
+    EventsEditComponent
   ],
   imports: [
     BrowserModule,
