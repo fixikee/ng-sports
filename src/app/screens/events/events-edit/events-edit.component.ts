@@ -1,5 +1,6 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {IEvent} from '../../../dtos';
+import {ILocation} from '../../../dtos';
 import {ActivatedRoute} from '@angular/router';
 import eventsData from '../events.data';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
@@ -14,6 +15,7 @@ export class EventsEditComponent implements OnInit, OnDestroy {
   private id: number;
   private sub: any;
   event: IEvent;
+  locations: ILocation[] = eventsData.map(e => e.location);
 
   constructor(private route: ActivatedRoute, private formBuilder: FormBuilder) {
   }

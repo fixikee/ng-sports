@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {IEvent} from '../../../dtos';
+import {IEvent, ILocation} from '../../../dtos';
+import eventsData from '../events.data';
 
 @Component({
   selector: 'app-events-add',
@@ -11,6 +12,8 @@ export class EventsAddComponent implements OnInit {
   public form: FormGroup;
   public data: IEvent;
   public hide = true;
+  locations: ILocation[] = eventsData.map(e => e.location);
+
 
   constructor(
     private formBuilder: FormBuilder

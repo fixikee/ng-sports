@@ -17,7 +17,9 @@ import {
   MatCheckboxModule,
   MatIconModule,
   MatListModule,
-  MatListSubheaderCssMatStyler
+  MatListSubheaderCssMatStyler,
+  MatDatepickerModule,
+  MatNativeDateModule
 } from '@angular/material';
 import { RegisterComponent } from './screens/register/register.component';
 import { LocationsAddComponent } from './screens/locations/locations-add/locations-add.component';
@@ -66,7 +68,9 @@ import { EventsDetailsComponent } from './screens/events/events-details/events-d
     MatCheckboxModule,
     MatButtonModule,
     MatListModule,
-    MatCardModule
+    MatCardModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]
