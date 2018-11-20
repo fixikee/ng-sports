@@ -22,6 +22,7 @@ import {EventsAddComponent} from './screens/events/events-add/events-add.compone
 import {EventsEditComponent} from './screens/events/events-edit/events-edit.component';
 import {EventsDetailsComponent} from './screens/events/events-details/events-details.component';
 import {MaterialModule} from './material.module';
+import { ActivityComponent } from './screens/activity/activity.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import {MaterialModule} from './material.module';
     EventsAddComponent,
     EventsComponent,
     EventsDetailsComponent,
-    EventsEditComponent
+    EventsEditComponent,
+    ActivityComponent
   ],
   imports: [
     BrowserModule,

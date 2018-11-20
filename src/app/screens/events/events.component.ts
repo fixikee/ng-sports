@@ -16,4 +16,7 @@ export class EventsComponent implements OnInit {
   ngOnInit() {
   }
 
+  deleteFunc() {
+    console.log('delete works');
+  }
 }
