@@ -24,6 +24,7 @@ import {EventsDetailsComponent} from './screens/events/events-details/events-det
 import {MaterialModule} from './material.module';
 import { ActivityComponent } from './screens/activity/activity.component';
 import { ActivityAddComponent } from './screens/activity/activity-add/activity-add.component';
+import { ActivityEditComponent } from './screens/activity/activity-edit/activity-edit.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { ActivityAddComponent } from './screens/activity/activity-add/activity-a
     EventsDetailsComponent,
     EventsEditComponent,
     ActivityComponent,
-    ActivityAddComponent
+    ActivityAddComponent,
+    ActivityEditComponent
   ],
   imports: [
     BrowserModule,

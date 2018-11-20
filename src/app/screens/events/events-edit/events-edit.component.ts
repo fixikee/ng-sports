@@ -17,8 +17,10 @@ export class EventsEditComponent implements OnInit, OnDestroy {
   event: IEvent;
   locations: ILocation[] = eventsData.map(e => e.location);
 
-  constructor(private route: ActivatedRoute, private formBuilder: FormBuilder) {
-  }
+  constructor(
+    private route: ActivatedRoute,
+    private formBuilder: FormBuilder
+  ) {}
 
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
