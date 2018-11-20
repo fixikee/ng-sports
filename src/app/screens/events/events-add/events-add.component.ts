@@ -11,9 +11,7 @@ import eventsData from '../events.data';
 export class EventsAddComponent implements OnInit {
   public form: FormGroup;
   public data: IEvent;
-  public hide = true;
   locations: ILocation[] = eventsData.map(e => e.location);
-
 
   constructor(
     private formBuilder: FormBuilder

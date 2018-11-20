@@ -1,12 +1,12 @@
-<div style="margin-top: 200%">
-  <!--<button mat-raised-button color="primary" [routerLink]="['/activity/add']">Add Event</button>-->
+<div>
+  <button mat-raised-button color="primary" [routerLink]="['/activity/add']">Add Activity</button>
 
   <mat-card class="example-card" *ngFor="let activity of activities">
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>{{ activity.distance}}</mat-card-title>
-      <mat-card-subtitle>{{ activity.date}}</mat-card-subtitle>
-      <mat-card-subtitle>{{ activity.duration}}</mat-card-subtitle>
+      <mat-card-title>{{ activity.date}}</mat-card-title>
+      <mat-card-subtitle>{{ activity.durationInSeconds}}</mat-card-subtitle>
+      <mat-card-subtitle>{{ activity.distanceInMeters}}</mat-card-subtitle>
       <mat-card-subtitle>{{ activity.location.locationName}}</mat-card-subtitle>
       <mat-card-subtitle>{{ activity.activityType.activityTypeName}}</mat-card-subtitle>
     </mat-card-header>

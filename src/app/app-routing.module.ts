@@ -16,6 +16,7 @@ import {ActivityTypeDetailsComponent} from './screens/activity-type/activity-typ
 import {ActivityTypeEditComponent} from './screens/activity-type/activity-type-edit/activity-type-edit.component';
 import {ActivityTypeAddComponent} from './screens/activity-type/activity-type-add/activity-type-add.component';
 import {ActivityComponent} from './screens/activity/activity.component';
+import {ActivityAddComponent} from './screens/activity/activity-add/activity-add.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/news', pathMatch: 'full'},
@@ -34,7 +35,8 @@ const routes: Routes = [
   {path: 'events', component: EventsComponent},
   {path: 'events/:id', component: EventsDetailsComponent},
   {path: 'events/edit/:id', component: EventsEditComponent},
-  {path: 'activity', component: ActivityComponent}
+  {path: 'activity', component: ActivityComponent},
+  {path: 'activity/add', component: ActivityAddComponent}
 ];
 
 @NgModule({

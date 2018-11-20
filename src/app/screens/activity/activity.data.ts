@@ -26,13 +26,13 @@ const activities: IActivity[] = [
     distanceInMeters: 200,
     location: <ILocation>{
       id: 1,
-      locationName: 'location name',
+      locationName: 'location name 2',
       coordinates: 'string2',
       imgUrl: 'string2'
     },
     activityType: <IActivityType>{
       id: 1,
-      activityTypeName: 'activity type name',
+      activityTypeName: 'activity type name 2',
       icon: 'icon as string2'
     }
   }
