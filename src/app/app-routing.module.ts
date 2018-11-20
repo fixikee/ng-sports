@@ -18,6 +18,7 @@ import {ActivityTypeAddComponent} from './screens/activity-type/activity-type-ad
 import {ActivityComponent} from './screens/activity/activity.component';
 import {ActivityAddComponent} from './screens/activity/activity-add/activity-add.component';
 import {ActivityEditComponent} from './screens/activity/activity-edit/activity-edit.component';
+import {ActivityDetailsComponent} from './screens/activity/activity-details/activity-details.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/news', pathMatch: 'full'},
@@ -38,6 +39,7 @@ const routes: Routes = [
   {path: 'events/edit/:id', component: EventsEditComponent},
   {path: 'activity', component: ActivityComponent},
   {path: 'activity/add', component: ActivityAddComponent},
+  {path: 'activity/:id', component: ActivityDetailsComponent},
   {path: 'activity/edit/:id', component: ActivityEditComponent}
 ];
 
