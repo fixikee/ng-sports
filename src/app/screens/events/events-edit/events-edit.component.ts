@@ -44,9 +44,9 @@ export class EventsEditComponent implements OnInit, OnDestroy {
     if (this.form.valid) {
       this.event = {
         id: this.event.id,
-        name: this.event.name,
-        date: this.event.date,
-        location: this.event.location,
+        name: this.form.get('name').value,
+        date: this.form.get('date').value,
+        location: this.form.get('location').value,
         imgUrl: this.event.imgUrl
       };
       console.log(this.event);

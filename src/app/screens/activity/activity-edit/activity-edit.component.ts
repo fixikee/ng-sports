@@ -46,11 +46,11 @@ export class ActivityEditComponent implements OnInit, OnDestroy {
     if (this.form.valid) {
       this.activity = {
         id: this.activity.id,
-        date: this.activity.date,
-        durationInSeconds: this.activity.durationInSeconds,
-        distanceInMeters: this.activity.distanceInMeters,
-        location: this.activity.location,
-        activityType: this.activity.activityType
+        date: this.form.get('date').value,
+        durationInSeconds: this.form.get('durationInSeconds').value,
+        distanceInMeters: this.form.get('distanceInMeters').value,
+        location: this.form.get('location').value,
+        activityType: this.form.get('activityType').value
       };
       console.log(this.activity);
     } else {
