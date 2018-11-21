@@ -1,0 +1,13 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+  <mat-form-field>
+    <input matInput id="locationName" formControlName="locationName" placeholder="LocationName *">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput id="coordinates" formControlName="coordinates" placeholder="Coordinates *">
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit" [disabled]="!form.valid">Save</button>
+
+</form>

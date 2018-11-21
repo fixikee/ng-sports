@@ -1,0 +1,9 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+  <mat-form-field>
+    <input matInput id="activityTypeName" formControlName="activityTypeName" placeholder="ActivityTypeName *">
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit" [disabled]="!form.valid">Save</button>
+
+</form>

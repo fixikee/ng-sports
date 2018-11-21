@@ -1,0 +1,35 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+  <mat-form-field>
+    <input matInput formControlName="date" [matDatepicker]="picker" placeholder="Choose a date">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput id="durationInSeconds" formControlName="durationInSeconds" placeholder="Duration in seconds *">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput id="distanceInMeters" formControlName="distanceInMeters" placeholder="Distance in meters *">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-select formControlName="location" placeholder="location">
+      <mat-option *ngFor="let location of locations" [value]="location.id">
+        {{location.locationName}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-select formControlName="activityType" placeholder="activityType">
+      <mat-option *ngFor="let activityType of activityTypes" [value]="activityType.id">
+        {{activityType.activityTypeName}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit" [disabled]="!form.valid">Add Activity</button>
+
+</form>

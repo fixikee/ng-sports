@@ -1,0 +1,11 @@
+<button mat-raised-button color="primary" [routerLink]="['/activity-type/add']">New</button>
+
+<mat-list>
+  <h3 mat-subheader>Acivity types</h3>
+  <mat-list-item *ngFor="let activityType of activityTypes">
+    <a [routerLink]="['/activity-type', activityType.id]">
+      <mat-icon mat-list-icon>{{ activityType.icon }}</mat-icon>
+    </a>
+    <h4 mat-line>{{ activityType.activityTypeName }}</h4>
+  </mat-list-item>
+</mat-list>

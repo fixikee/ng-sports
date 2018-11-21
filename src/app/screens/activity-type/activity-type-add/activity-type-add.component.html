@@ -1,0 +1,8 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <mat-form-field>
+    <input matInput id="activityTypeAddName" formControlName="activityTypeAddName" placeholder="ActivityTypeAddName *">
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit" [disabled]="!form.valid">Add Activity Type</button>
+
+</form>

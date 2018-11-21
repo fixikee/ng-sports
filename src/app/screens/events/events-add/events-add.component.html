@@ -1,0 +1,23 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+  <mat-form-field>
+    <input matInput id="name" formControlName="name" placeholder="Name *">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput formControlName="date" [matDatepicker]="picker" placeholder="Choose a date">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-select formControlName="location" placeholder="location">
+      <mat-option *ngFor="let location of locations" [value]="location.id">
+        {{location.locationName}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit" [disabled]="!form.valid">Add Event</button>
+
+</form>
