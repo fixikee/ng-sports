@@ -13,3 +13,9 @@
   margin-left: auto;
   padding-top: 10px;
 }
+
+
+mat-toolbar-row {
+  display: flex;
+  justify-content: space-between;
+}
