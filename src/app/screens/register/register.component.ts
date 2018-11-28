@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {Component, OnInit} from '@angular/core';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {IRegister} from '../../dtos';
+import {Router} from '@angular/router';
+import {AuthService} from '../../auth/auth.service';
 // import { MatSnackBar } from '@angular/material';
 // import { Router } from '@angular/router';
 
@@ -16,7 +18,9 @@ export class RegisterComponent implements OnInit {
   public hide = true;
 
   constructor(
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    public router: Router,
+    public auth: AuthService
   ) {}
 
   ngOnInit() {
@@ -40,6 +44,13 @@ export class RegisterComponent implements OnInit {
         password: this.form.get('password').value,
       };
       console.log(this.data);
+
+      this.auth.login(this.data)
+        .then(res => {
+          if (res) {
+            this.router.navigate(['news']);
+          }
+        });
     } else {
       alert('invalid form');
     }

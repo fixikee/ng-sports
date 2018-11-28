@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {Component, OnInit} from '@angular/core';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {ILogin} from '../../dtos';
+import {Router} from '@angular/router';
+import {AuthService} from '../../auth/auth.service';
 
 
 @Component({
@@ -14,7 +16,9 @@ export class LoginComponent implements OnInit {
   public hide = true;
 
   constructor(
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    public router: Router,
+    public auth: AuthService
   ) {}
 
   ngOnInit() {
@@ -36,6 +40,13 @@ export class LoginComponent implements OnInit {
         password: this.form.get('password').value,
       };
       console.log(this.data);
+
+      this.auth.login(this.data)
+        .then(res => {
+          if (res) {
+            this.router.navigate(['news']);
+          }
+        });
     } else {
       alert('invalid form');
     }

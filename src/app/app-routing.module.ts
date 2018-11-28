@@ -19,10 +19,11 @@ import {ActivityComponent} from './screens/activity/activity.component';
 import {ActivityAddComponent} from './screens/activity/activity-add/activity-add.component';
 import {ActivityEditComponent} from './screens/activity/activity-edit/activity-edit.component';
 import {ActivityDetailsComponent} from './screens/activity/activity-details/activity-details.component';
+import {AuthGuardService as AuthGuard} from './auth/auth-guard.service';
 
 const routes: Routes = [
   {path: '', redirectTo: '/news', pathMatch: 'full'},
-  {path: 'news', component: NewsFeedComponent},
+  {path: 'news', component: NewsFeedComponent, canActivate: [AuthGuard]},
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'locations/add', component: LocationsAddComponent},
