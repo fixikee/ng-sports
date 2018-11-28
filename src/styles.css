@@ -4,3 +4,7 @@
   width: 100%;
   display: block;
 }
+
+body {
+  background-color: rgb(242, 246, 255);
+}

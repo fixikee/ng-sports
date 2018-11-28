@@ -14,11 +14,36 @@
   padding-top: 10px;
 }
 
+mat-toolbar {
+  min-height: unset;
+}
 
 mat-toolbar-row {
-  display: flex;
-  justify-content: space-between;
+  height: unset;
+  display: grid;
+  padding: 0;
+  grid-template-columns: repeat(7, 1fr);
   color: rgba(255, 255, 255, 0.5);
+}
+
+mat-toolbar-row span {
+  text-align: center;
+  padding: 10px 0;
+  border-bottom: 4px solid rgba(255, 255, 255, 0.5);
+}
+
+
+mat-toolbar-row span.active {
+  color: white;
+  border-bottom-color: white;
+}
+
+mat-toolbar-row span:focus {
+  outline: none;
+}
+
+mat-toolbar-row span:hover {
+  cursor: pointer;
 }
 
 mat-toolbar-row mat-icon {
