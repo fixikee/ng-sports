@@ -14,7 +14,6 @@ export class AuthService {
   }
 
   public login(data: ILogin) {
-    // TODO: Kazu write code here
     return new Promise(function (resolve, reject) {
       setTimeout(function () {
         resolve(true);
@@ -23,7 +22,6 @@ export class AuthService {
   }
 
   public register(data: IRegister) {
-    // TODO: Kazu write code here
     return new Promise(function (resolve, reject) {
       setTimeout(function () {
         resolve(true);
@@ -31,16 +29,13 @@ export class AuthService {
     });
   }
 
-  public logout(): void {
-    // TODO: Kazu write code here, change return type if needed
+  public logout() {
   }
 
-  public getCurrentUser(): void {
-    // TODO: Kazu write code here, change return type if needed
+  public getCurrentUser() {
 
   }
 
-  public getAllUsers(): void {
-    // TODO: Kazu write code here, change return type if needed
+  public getAllUsers() {
   }
 }
