@@ -9,7 +9,7 @@ export class AuthService {
   constructor() {
   }
 
-  public isAuthenticated(): boolean {
+  public isLoggedIn(): boolean {
     return true;
   }
 

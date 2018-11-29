@@ -1,36 +1,36 @@
 <mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <span [ngClass]="isActive('/news')" routerLink="/news">
+  <mat-toolbar-row [ngClass]="{unauthenticated: !isLoggedIn() }">
+    <span *ngIf="isLoggedIn()" [ngClass]="isActive('/news')" routerLink="/news">
       <mat-icon>import_contacts</mat-icon>
       News
     </span>
 
-    <span [ngClass]="isActive('/events')" routerLink="/events">
+    <span *ngIf="isLoggedIn()" [ngClass]="isActive('/events')" routerLink="/events">
       <mat-icon>art_track</mat-icon>
       Events
     </span>
 
-    <span [ngClass]="isActive('/login')" routerLink="/login">
+    <span *ngIf="!isLoggedIn()" [ngClass]="isActive('/login')" routerLink="/login">
       <mat-icon>account_box</mat-icon>
       Login
     </span>
 
-    <span [ngClass]="isActive('/register')" routerLink="/register">
+    <span *ngIf="!isLoggedIn()" [ngClass]="isActive('/register')" routerLink="/register">
       <mat-icon>create</mat-icon>
       Register
     </span>
 
-    <span [ngClass]="isActive('/locations')" routerLink="/locations">
+    <span *ngIf="isLoggedIn()" [ngClass]="isActive('/locations')" routerLink="/locations">
       <mat-icon>location_on</mat-icon>
       Locations
     </span>
 
-    <span [ngClass]="isActive('/activity')" routerLink="/activity">
+    <span *ngIf="isLoggedIn()" [ngClass]="isActive('/activity')" routerLink="/activity">
       <mat-icon>art_track</mat-icon>
       Activity
     </span>
 
-    <span [ngClass]="isActive('/activity-type')" routerLink="/activity-type">
+    <span *ngIf="isLoggedIn()" [ngClass]="isActive('/activity-type')" routerLink="/activity-type">
       <mat-icon>view_list</mat-icon>
       Activity Types
     </span>

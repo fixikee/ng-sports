@@ -8,3 +8,7 @@
 body {
   background-color: rgb(242, 246, 255);
 }
+
+form {
+  max-width: 500px;
+}

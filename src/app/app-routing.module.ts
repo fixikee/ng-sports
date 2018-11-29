@@ -22,26 +22,26 @@ import {ActivityDetailsComponent} from './screens/activity/activity-details/acti
 import {AuthGuardService as AuthGuard} from './auth/auth-guard.service';
 
 const routes: Routes = [
-  {path: '', redirectTo: '/news', pathMatch: 'full'},
+  {path: '', redirectTo: '/login', pathMatch: 'full'},
   {path: 'news', component: NewsFeedComponent, canActivate: [AuthGuard]},
-  {path: 'login', component: LoginComponent},
-  {path: 'register', component: RegisterComponent},
-  {path: 'locations/add', component: LocationsAddComponent},
-  {path: 'locations', component: LocationsComponent},
-  {path: 'locations/:id', component: LocationsDetailsComponent},
-  {path: 'locations/edit/:id', component: LocationsEditComponent},
-  {path: 'activity-type', component: ActivityTypeComponent},
-  {path: 'activity-type/add', component: ActivityTypeAddComponent},
-  {path: 'activity-type/:id', component: ActivityTypeDetailsComponent},
-  {path: 'activity-type/edit/:id', component: ActivityTypeEditComponent},
-  {path: 'events/add', component: EventsAddComponent},
-  {path: 'events', component: EventsComponent},
-  {path: 'events/:id', component: EventsDetailsComponent},
-  {path: 'events/edit/:id', component: EventsEditComponent},
-  {path: 'activity', component: ActivityComponent},
-  {path: 'activity/add', component: ActivityAddComponent},
-  {path: 'activity/:id', component: ActivityDetailsComponent},
-  {path: 'activity/edit/:id', component: ActivityEditComponent}
+  {path: 'login', component: LoginComponent, canActivate: [AuthGuard]},
+  {path: 'register', component: RegisterComponent, canActivate: [AuthGuard]},
+  {path: 'locations/add', component: LocationsAddComponent, canActivate: [AuthGuard]},
+  {path: 'locations', component: LocationsComponent, canActivate: [AuthGuard]},
+  {path: 'locations/:id', component: LocationsDetailsComponent, canActivate: [AuthGuard]},
+  {path: 'locations/edit/:id', component: LocationsEditComponent, canActivate: [AuthGuard]},
+  {path: 'activity-type', component: ActivityTypeComponent, canActivate: [AuthGuard]},
+  {path: 'activity-type/add', component: ActivityTypeAddComponent, canActivate: [AuthGuard]},
+  {path: 'activity-type/:id', component: ActivityTypeDetailsComponent, canActivate: [AuthGuard]},
+  {path: 'activity-type/edit/:id', component: ActivityTypeEditComponent, canActivate: [AuthGuard]},
+  {path: 'events/add', component: EventsAddComponent, canActivate: [AuthGuard]},
+  {path: 'events', component: EventsComponent, canActivate: [AuthGuard]},
+  {path: 'events/:id', component: EventsDetailsComponent, canActivate: [AuthGuard]},
+  {path: 'events/edit/:id', component: EventsEditComponent, canActivate: [AuthGuard]},
+  {path: 'activity', component: ActivityComponent, canActivate: [AuthGuard]},
+  {path: 'activity/add', component: ActivityAddComponent, canActivate: [AuthGuard]},
+  {path: 'activity/:id', component: ActivityDetailsComponent, canActivate: [AuthGuard]},
+  {path: 'activity/edit/:id', component: ActivityEditComponent, canActivate: [AuthGuard]}
 ];
 
 @NgModule({

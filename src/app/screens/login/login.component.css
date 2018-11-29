@@ -6,3 +6,8 @@
 .register-button {
   margin-left: 10px;
 }
+
+
+.mat-form-field:focus > div.mat-icon {
+  display: none;
+}
