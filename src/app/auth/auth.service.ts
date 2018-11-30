@@ -18,9 +18,11 @@ export class AuthService {
     return true;
   }
 
+  public getToken(): string {
+    return 'abc';
+  }
+
   /*
-
-
 
     this.http.put('/api/users/new',
   {
