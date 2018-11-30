@@ -22,10 +22,14 @@ import {EventsAddComponent} from './screens/events/events-add/events-add.compone
 import {EventsEditComponent} from './screens/events/events-edit/events-edit.component';
 import {EventsDetailsComponent} from './screens/events/events-details/events-details.component';
 import {MaterialModule} from './material.module';
-import { ActivityComponent } from './screens/activity/activity.component';
-import { ActivityAddComponent } from './screens/activity/activity-add/activity-add.component';
-import { ActivityEditComponent } from './screens/activity/activity-edit/activity-edit.component';
-import { ActivityDetailsComponent } from './screens/activity/activity-details/activity-details.component';
+import {ActivityComponent} from './screens/activity/activity.component';
+import {ActivityAddComponent} from './screens/activity/activity-add/activity-add.component';
+import {ActivityEditComponent} from './screens/activity/activity-edit/activity-edit.component';
+import {ActivityDetailsComponent} from './screens/activity/activity-details/activity-details.component';
+import {AuthInterceptor} from './interceptors/auth-interceptor.service';
+
+import {HttpClientModule} from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -56,9 +60,10 @@ import { ActivityDetailsComponent } from './screens/activity/activity-details/ac
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
-    MaterialModule
+    MaterialModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [AuthInterceptor],
   bootstrap: [AppComponent]
 })
 export class AppModule {

@@ -1,3 +1,10 @@
+export interface IUser {
+  _id: number
+  email: string;
+  displayName: string;
+  token: string;
+}
+
 export interface ILogin {
   email: string;
   password: string;
