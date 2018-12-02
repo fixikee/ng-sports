@@ -30,23 +30,26 @@ mat-toolbar-row.unauthenticated {
   grid-template-columns: auto auto
 }
 
-mat-toolbar-row span {
+mat-toolbar-row div {
   text-align: center;
   padding: 10px 0;
   border-bottom: 4px solid rgba(255, 255, 255, 0.5);
 }
 
+mat-toolbar-row div :not(mat-icon) {
+  font-variant-caps: all-small-caps;
+}
 
-mat-toolbar-row span.active {
+mat-toolbar-row div.active {
   color: white;
   border-bottom-color: white;
 }
 
-mat-toolbar-row span:focus {
+mat-toolbar-row div:focus {
   outline: none;
 }
 
-mat-toolbar-row span:hover {
+mat-toolbar-row div:hover {
   cursor: pointer;
 }
 

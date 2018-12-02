@@ -1,39 +1,40 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row [ngClass]="{unauthenticated: !isLoggedIn() }">
-    <span *ngIf="isLoggedIn()" [ngClass]="isActive('/news')" routerLink="/news">
+
+    <div *ngIf="isLoggedIn()" [ngClass]="isActive('/news')" routerLink="/news">
       <mat-icon>import_contacts</mat-icon>
-      News
-    </span>
+      <span> News </span>
+    </div>
 
-    <span *ngIf="isLoggedIn()" [ngClass]="isActive('/events')" routerLink="/events">
+    <div *ngIf="isLoggedIn()" [ngClass]="isActive('/events')" routerLink="/events">
       <mat-icon>art_track</mat-icon>
-      Events
-    </span>
+      <span> Events </span>
+    </div>
 
-    <span *ngIf="!isLoggedIn()" [ngClass]="isActive('/login')" routerLink="/login">
+    <div *ngIf="!isLoggedIn()" [ngClass]="isActive('/login')" routerLink="/login">
       <mat-icon>account_box</mat-icon>
-      Login
-    </span>
+      <span> Login </span>
+    </div>
 
-    <span *ngIf="!isLoggedIn()" [ngClass]="isActive('/register')" routerLink="/register">
+    <div *ngIf="!isLoggedIn()" [ngClass]="isActive('/register')" routerLink="/register">
       <mat-icon>create</mat-icon>
-      Register
-    </span>
+      <span> Register </span>
+    </div>
 
-    <span *ngIf="isLoggedIn()" [ngClass]="isActive('/locations')" routerLink="/locations">
+    <div *ngIf="isLoggedIn()" [ngClass]="isActive('/locations')" routerLink="/locations">
       <mat-icon>location_on</mat-icon>
-      Locations
-    </span>
+      <span> Locations </span>
+    </div>
 
-    <span *ngIf="isLoggedIn()" [ngClass]="isActive('/activity')" routerLink="/activity">
+    <div *ngIf="isLoggedIn()" [ngClass]="isActive('/activity')" routerLink="/activity">
       <mat-icon>art_track</mat-icon>
-      Activity
-    </span>
+      <span> Activity </span>
+    </div>
 
-    <span *ngIf="isLoggedIn()" [ngClass]="isActive('/activity-type')" routerLink="/activity-type">
+    <div *ngIf="isLoggedIn()" [ngClass]="isActive('/activity-type')" routerLink="/activity-type">
       <mat-icon>view_list</mat-icon>
-      Activity Types
-    </span>
+      <span> Activity Types </span>
+    </div>
 
   </mat-toolbar-row>
 </mat-toolbar>
