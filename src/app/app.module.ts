@@ -28,7 +28,7 @@ import {ActivityEditComponent} from './screens/activity/activity-edit/activity-e
 import {ActivityDetailsComponent} from './screens/activity/activity-details/activity-details.component';
 import {AuthInterceptor} from './interceptors/auth-interceptor.service';
 
-import {HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -63,7 +63,11 @@ import {HttpClientModule} from '@angular/common/http';
     MaterialModule,
     HttpClientModule
   ],
-  providers: [AuthInterceptor],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: AuthInterceptor,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule {

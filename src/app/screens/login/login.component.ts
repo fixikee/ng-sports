@@ -40,7 +40,6 @@ export class LoginComponent implements OnInit {
         email: this.form.get('email').value,
         password: this.form.get('password').value,
       };
-      console.log(this.data);
 
       this.auth.login(this.data)
         .subscribe((user: IUser) => {

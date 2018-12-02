@@ -43,13 +43,12 @@ export class RegisterComponent implements OnInit {
         email: this.form.get('email').value,
         password: this.form.get('password').value,
       };
-      console.log(this.data);
 
-      this.auth.login(this.data)
+      this.auth.register(this.data)
         .subscribe(res => {
-          console.log(res);
-        });
-      // this.router.navigate(['news']);
+          this.auth.setCurrentUser(res);
+          this.router.navigate(['news']);
+        }, error => console.log('Login -> onSubmit', error));
     } else {
       alert('invalid form');
     }

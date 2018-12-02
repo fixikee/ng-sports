@@ -16,10 +16,8 @@ export class NewsFeedComponent implements OnInit {
     this.authService.getCurrentUser()
       .subscribe(
         (user: IUser) => {
-          console.log(user);
         },
         error => console.log('Login -> onSubmit', error)
       );
   }
-
 }

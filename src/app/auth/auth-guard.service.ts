@@ -29,7 +29,6 @@ export class AuthGuardService implements CanActivate {
 
   canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
     const isAuthRoute = next.routeConfig.path === AuthRoutes.Login || next.routeConfig.path === AuthRoutes.Register;
-    console.log(next.routeConfig.path, isAuthRoute, this.auth.isLoggedIn());
 
     if (this.auth.isLoggedIn()) {
       return isAuthRoute ? this.redirectToRoot('/news') : true;
