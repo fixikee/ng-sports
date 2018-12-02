@@ -46,11 +46,10 @@ export class RegisterComponent implements OnInit {
       console.log(this.data);
 
       this.auth.login(this.data)
-        .then(res => {
-          if (res) {
-            this.router.navigate(['news']);
-          }
+        .subscribe(res => {
+          console.log(res);
         });
+      // this.router.navigate(['news']);
     } else {
       alert('invalid form');
     }

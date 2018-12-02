@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {ILogin} from '../../dtos';
+import {ILogin, IUser} from '../../dtos';
 import {Router} from '@angular/router';
 import {AuthService} from '../../auth/auth.service';
 
@@ -19,7 +19,8 @@ export class LoginComponent implements OnInit {
     private formBuilder: FormBuilder,
     public router: Router,
     public auth: AuthService
-  ) {}
+  ) {
+  }
 
   ngOnInit() {
     this.createForm();
@@ -42,13 +43,14 @@ export class LoginComponent implements OnInit {
       console.log(this.data);
 
       this.auth.login(this.data)
-        .then(res => {
-          if (res) {
-            this.router.navigate(['news']);
-          }
-        });
+        .subscribe((user: IUser) => {
+          this.auth.setCurrentUser(user);
+          this.router.navigate(['news']);
+        }, error => console.log('Login -> onSubmit', error));
     } else {
       alert('invalid form');
     }
   }
 }
+
+// logout: gomb, az auth service logout metódusát meghívja, a logout current user = null. Ahol a gomb handlere van, oda controlerbe auth service, vissza a kezdő oldalra

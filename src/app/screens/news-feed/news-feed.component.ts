@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {AuthService} from '../../auth/auth.service';
+import {IUser} from '../../dtos';
 
 @Component({
   selector: 'app-news-feed',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewsFeedComponent implements OnInit {
 
-  constructor() { }
+  constructor(private authService: AuthService) {
+  }
 
   ngOnInit() {
+    this.authService.getCurrentUser()
+      .subscribe(
+        (user: IUser) => {
+          console.log(user);
+        },
+        error => console.log('Login -> onSubmit', error)
+      );
   }
 
 }
