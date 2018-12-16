@@ -23,6 +23,7 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log('log in');
     this.createForm();
   }
 
@@ -43,7 +44,7 @@ export class LoginComponent implements OnInit {
 
       this.auth.login(this.data)
         .subscribe((user: IUser) => {
-          this.auth.setCurrentUser(user);
+          this.auth.setCurrentUser(user).setToken(user.token);
           this.router.navigate(['news']);
         }, error => console.log('Login -> onSubmit', error));
     } else {

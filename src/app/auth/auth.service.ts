@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {ILogin, IRegister, IUser} from '../dtos';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
+import {LocalStorageService} from '../utils/local-storage.service';
 
 @Injectable({
   providedIn: 'root'
@@ -9,12 +10,20 @@ import {Observable} from 'rxjs';
 export class AuthService {
   private requestUrl = `https://alacrity.herokuapp.com/`;
   private currentUser: IUser = null;
+  private token: string = null;
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient,
+              private localStorageService: LocalStorageService) {
   }
 
-  public setCurrentUser(currentUser: IUser): void {
+  public setCurrentUser(currentUser: IUser): AuthService {
     this.currentUser = currentUser;
+    return this;
+  }
+
+  public setToken(token: string): void {
+    this.token = token;
+    this.localStorageService.setToken(token);
   }
 
   public isLoggedIn(): boolean {
@@ -22,7 +31,7 @@ export class AuthService {
   }
 
   public getToken(): string {
-    return this.currentUser ? this.currentUser.token : null;
+    return this.token ? this.token : null;
   }
 
   public login(data: ILogin): Observable<IUser> {

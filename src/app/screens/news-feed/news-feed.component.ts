@@ -12,6 +12,7 @@ export class NewsFeedComponent implements OnInit {
   constructor(private authService: AuthService) {
   }
 
+
   ngOnInit() {
     this.authService.getCurrentUser()
       .subscribe(

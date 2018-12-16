@@ -46,7 +46,7 @@ export class RegisterComponent implements OnInit {
 
       this.auth.register(this.data)
         .subscribe(res => {
-          this.auth.setCurrentUser(res);
+          this.auth.setCurrentUser(res).setToken(res.token);
           this.router.navigate(['news']);
         }, error => console.log('Login -> onSubmit', error));
     } else {
