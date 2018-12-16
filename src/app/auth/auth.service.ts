@@ -42,9 +42,9 @@ export class AuthService {
     return this.http.post<IUser>(this.requestUrl + `api/users/new`, data);
   }
 
-  // public logout(): Observable<IUser> {
-  //   return this.http.post<IUser>(this.requestUrl + `api/users/logout`, this.currentUser);
-  // }
+  public logout(): Observable<IUser> {
+    return this.http.delete<IUser>(this.requestUrl + `api/users/logout`, {});
+  }
 
   public getCurrentUser(): Observable<IUser> {
     return this.http.get<IUser>(this.requestUrl + `api/users/current`);

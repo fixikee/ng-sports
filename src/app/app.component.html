@@ -36,6 +36,10 @@
       <span> Activity Types </span>
     </div>
 
+    <div *ngIf="isLoggedIn()" [ngClass]="isActive('/activity-type')" (click)="logout()">
+      <mat-icon>exit_to_app</mat-icon>
+      <span> Logout </span>
+    </div>
   </mat-toolbar-row>
 </mat-toolbar>
 
